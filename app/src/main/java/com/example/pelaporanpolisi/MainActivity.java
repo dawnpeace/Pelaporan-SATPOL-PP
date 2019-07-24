@@ -2,6 +2,7 @@ package com.example.pelaporanpolisi;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("Pelaporan SATPOL PP");
+        sharedPrefHelper = SharedPrefHelper.getInstance(this);
         requestStoragePermission();
         BottomNavigationView navView = findViewById(R.id.bnv_main);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -57,6 +59,32 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.navigation_logout:
+                AlertDialog.Builder logoutAlert = new AlertDialog.Builder(this, R.style.AlertDialog);
+                logoutAlert.setMessage("Apakah anda yakin untuk keluar ?")
+                        .setCancelable(true)
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                sharedPrefHelper.logout();
+                                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        }).create();
+                logoutAlert.show();
+        }
+        return true;
+    }
 
     private void requestStoragePermission(){
         if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
