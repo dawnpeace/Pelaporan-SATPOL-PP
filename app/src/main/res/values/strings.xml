@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PelaporanPolisi</string>
+    <string name="new_report">Laporan Baru</string>
+    <string name="on_progress">Sedang Ditangani</string>
+    <string name="show_map">Tampilkan Peta</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
