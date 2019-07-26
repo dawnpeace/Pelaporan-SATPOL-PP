@@ -9,6 +9,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public interface Authentication {
     @FormUrlEncoded
@@ -20,4 +21,12 @@ public interface Authentication {
 
     @GET("auth/user")
     Call<ProfileModel> getProfil();
+
+    @FormUrlEncoded
+    @PUT("auth/store-fcm-token")
+    Call<Void> storeFirebaseToken(@Field("fcm_token") String token);
+
+    @PUT("auth/destroy-fcm-token")
+    Call<Void> destroyFirebaseToken();
+
 }

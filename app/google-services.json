@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "414562289026",
+    "firebase_url": "https://pelaporan.firebaseio.com",
+    "project_id": "pelaporan",
+    "storage_bucket": "pelaporan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414562289026:android:a5744f4d2158f9ed",
+        "android_client_info": {
+          "package_name": "com.example.pelaporanmasyarakat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414562289026-0u59cohhm39frtc6rsumtq0qrf2kuk0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQN8ZbW1ZO8vbSDXXhJa2p9UPPaEACV4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414562289026-0u59cohhm39frtc6rsumtq0qrf2kuk0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414562289026:android:4b48d778ceca2c2c",
+        "android_client_info": {
+          "package_name": "com.example.pelaporanpolisi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414562289026-2lap3hn3iodbkk5hqqlutd7fds57tt5a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pelaporanpolisi",
+            "certificate_hash": "17033e73a91a69e93b8b7aad50fd2837758b296d"
+          }
+        },
+        {
+          "client_id": "414562289026-0u59cohhm39frtc6rsumtq0qrf2kuk0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQN8ZbW1ZO8vbSDXXhJa2p9UPPaEACV4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414562289026-0u59cohhm39frtc6rsumtq0qrf2kuk0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

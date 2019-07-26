@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pelaporanpolisi">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,6 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight"
         tools:ignore="GoogleAppIndexingWarning">
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,7 +39,6 @@
         <activity
             android:name=".ReportOnProgressActivity"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
-
         <activity
             android:name=".MapsActivity"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
